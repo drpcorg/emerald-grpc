@@ -2,6 +2,7 @@ syntax = "proto3";
 package emerald;
 option java_package = "io.emeraldpay.api.proto";
 import "common.proto";
+import "google/rpc/status.proto";
 
 service Blockchain {
     rpc SubscribeHead (Chain) returns (stream ChainHead) {}
@@ -74,6 +75,31 @@ message NativeCallReplyItem {
     NativeCallReplySignature signature = 5;
     uint32 errorCode = 6;
     string upstream_id = 7;
+    NativeCallReplyErrorContainer error = 8;
+}
+
+message NativeCallUpstreamError {
+    string upstream_id = 1;
+    NativeCallReplyErrorContainer upstream_error = 2;
+}
+
+message NativeCallInternalError {}
+
+message NativeCallInteractionError {
+    string upstream_id = 1;
+    oneof error {
+        google.rpc.Status grpc_status = 2;
+    }
+}
+
+message NativeCallReplyErrorContainer {
+    uint32 code = 1;
+    string message = 2;
+    oneof error {
+        NativeCallUpstreamError upstream = 3;
+        NativeCallInteractionError interaction = 4;
+        NativeCallInternalError internal = 5;
+    }
 }
 
 message NativeSubscribeRequest {
