@@ -144,6 +144,7 @@ message NodeStatusResponse {
     string nodeId = 1;
     NodeDescription description = 2;
     NodeStatus status = 3;
+    // somewhere here add build info
 }
 
 message NodeDescription {
@@ -168,6 +169,7 @@ message DescribeRequest {
 
 message DescribeResponse {
     repeated DescribeChain chains = 1;
+    BuildInfo build_info = 2;
 }
 
 message DescribeChain {
@@ -187,6 +189,10 @@ message DescribeChain {
      * List of subscriptions available through NativeSubscribe
      */
     repeated string supportedSubscriptions = 8;
+}
+
+message BuildInfo {
+    string version = 1;
 }
 
 message StatusRequest {
