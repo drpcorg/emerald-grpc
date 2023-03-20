@@ -144,7 +144,6 @@ message NodeStatusResponse {
     string nodeId = 1;
     NodeDescription description = 2;
     NodeStatus status = 3;
-    BuildInfo node_build_info = 4;
 }
 
 message NodeDescription {
@@ -153,6 +152,7 @@ message NodeDescription {
     repeated string supportedMethods = 3;
     int32 nodeId = 4;
     repeated string supportedSubscriptions = 5;
+    BuildInfo node_build_info = 6;
 }
 
 message NodeLabels {
