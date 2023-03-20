@@ -144,7 +144,7 @@ message NodeStatusResponse {
     string nodeId = 1;
     NodeDescription description = 2;
     NodeStatus status = 3;
-    // somewhere here add build info
+    BuildInfo node_build_info = 4;
 }
 
 message NodeDescription {
