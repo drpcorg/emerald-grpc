@@ -74,6 +74,7 @@ message NativeCallReplyItem {
     NativeCallReplySignature signature = 5;
     uint32 errorCode = 6;
     string upstream_id = 7;
+    string json_spans = 8;
 }
 
 message NativeSubscribeRequest {
