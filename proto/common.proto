@@ -23,6 +23,9 @@ enum ChainRef {
     CHAIN_ARBITRUM = 1004; // Arbitrum (next generation Layer2 technologies for Ethereum), https://arbitrum.io
     CHAIN_OPTIMISM = 1005; // Optimism (low-cost and lightning-fast Ethereum L2 blockchain), https://www.optimism.io
     CHAIN_BSC = 1006; // Binance Smart Chain, https://docs.bnbchain.org/docs/learn/intro
+    CHAIN_POLYGON_ZKEVM = 1007; // Polygon ZK-EVM
+    CHAIN_ARBITRUM_NOVA = 1008; // Arbitrum Nova, https://arbitrum.io
+    CHAIN_ZKSYNC = 1009; // zkSync, https://zksync.io/
 
     // Testnets start with 10_000
     CHAIN_MORDEN = 10001;
@@ -35,6 +38,9 @@ enum ChainRef {
     CHAIN_SEPOLIA = 10008;
     CHAIN_TESTNET_ARBITRUM = 10009;
     CHAIN_TESTNET_OPTIMISM = 10010;
+    CHAIN_TESTNET_POLYGON_ZKEVM = 10011; // Polygon ZK-EVM
+    CHAIN_TESTNET_ARBITRUM_NOVA = 10012; // Arbitrum Nova, https://arbitrum.io
+    CHAIN_TESTNET_ZKSYNC = 10013; // zkSync, https://zksync.io/
 
     // Non-standard starts from 20_000
 }
