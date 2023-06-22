@@ -39,8 +39,7 @@ enum ChainRef {
     CHAIN_TESTNET_ARBITRUM = 10009;
     CHAIN_TESTNET_OPTIMISM = 10010;
     CHAIN_TESTNET_POLYGON_ZKEVM = 10011; // Polygon ZK-EVM
-    CHAIN_TESTNET_ARBITRUM_NOVA = 10012; // Arbitrum Nova, https://arbitrum.io
-    CHAIN_TESTNET_ZKSYNC = 10013; // zkSync, https://zksync.io/
+    CHAIN_TESTNET_ZKSYNC = 10012; // zkSync, https://zksync.io/
 
     // Non-standard starts from 20_000
 }
