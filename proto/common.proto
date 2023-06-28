@@ -21,7 +21,7 @@ enum ChainRef {
     CHAIN_POLYGON_POS__MAINNET = 1002; // Matic PoS Ethereum sidechain based on Polygon
     CHAIN_RSK__MAINNET = 1003; // RSK sidechain, https://www.rsk.co/
     CHAIN_ARBITRUM__MAINNET = 1004; // Arbitrum (next generation Layer2 technologies for Ethereum), https://arbitrum.io
-    CHAIN_OPTIMISM = 1005; // Optimism (low-cost and lightning-fast Ethereum L2 blockchain), https://www.optimism.io
+    CHAIN_OPTIMISM__MAINNET = 1005; // Optimism (low-cost and lightning-fast Ethereum L2 blockchain), https://www.optimism.io
     CHAIN_BSC__MAINNET = 1006; // Binance Smart Chain, https://docs.bnbchain.org/docs/learn/intro
     CHAIN_POLYGON_ZKEVM__MAINNET = 1007; // Polygon ZK-EVM
     CHAIN_ARBITRUM_NOVA__MAINNET = 1008; // Arbitrum Nova, https://arbitrum.io
