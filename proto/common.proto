@@ -9,37 +9,38 @@ message Chain {
 enum ChainRef {
     CHAIN_UNSPECIFIED = 0;
 
-    CHAIN_BITCOIN = 1;
+    CHAIN_BITCOIN__MAINNET = 1;
     // CHAIN_GRIN = 2;
 
-    CHAIN_ETHEREUM = 100;
-    CHAIN_ETHEREUM_CLASSIC = 101;
-    CHAIN_FANTOM = 102; // Fantom, https://fantom.foundation/
+    CHAIN_ETHEREUM__MAINNET = 100;
+    CHAIN_ETHEREUM_CLASSIC__MAINNET = 101;
+    CHAIN_FANTOM__MAINNET = 102; // Fantom, https://fantom.foundation/
 
     // Sidechains and state channels start with 1_000
     // CHAIN_LIGHTNING = 1001;
-    CHAIN_MATIC = 1002; // Matic PoS Ethereum sidechain based on Polygon
-    CHAIN_RSK = 1003; // RSK sidechain, https://www.rsk.co/
-    CHAIN_ARBITRUM = 1004; // Arbitrum (next generation Layer2 technologies for Ethereum), https://arbitrum.io
+    CHAIN_POLYGON_POS__MAINNET = 1002; // Matic PoS Ethereum sidechain based on Polygon
+    CHAIN_RSK__MAINNET = 1003; // RSK sidechain, https://www.rsk.co/
+    CHAIN_ARBITRUM__MAINNET = 1004; // Arbitrum (next generation Layer2 technologies for Ethereum), https://arbitrum.io
     CHAIN_OPTIMISM = 1005; // Optimism (low-cost and lightning-fast Ethereum L2 blockchain), https://www.optimism.io
-    CHAIN_BSC = 1006; // Binance Smart Chain, https://docs.bnbchain.org/docs/learn/intro
-    CHAIN_POLYGON_ZKEVM = 1007; // Polygon ZK-EVM
-    CHAIN_ARBITRUM_NOVA = 1008; // Arbitrum Nova, https://arbitrum.io
-    CHAIN_ZKSYNC = 1009; // zkSync, https://zksync.io/
+    CHAIN_BSC__MAINNET = 1006; // Binance Smart Chain, https://docs.bnbchain.org/docs/learn/intro
+    CHAIN_POLYGON_ZKEVM__MAINNET = 1007; // Polygon ZK-EVM
+    CHAIN_ARBITRUM_NOVA__MAINNET = 1008; // Arbitrum Nova, https://arbitrum.io
+    CHAIN_ZKSYNC__MAINNET = 1009; // zkSync, https://zksync.io/
 
     // Testnets start with 10_000
-    CHAIN_MORDEN = 10001;
-    CHAIN_KOVAN = 10002;
-    CHAIN_TESTNET_BITCOIN = 10003;
+    CHAIN_ETHEREUM__MORDEN = 10001;
+    CHAIN_ETHEREUM__KOVAN = 10002;
+    CHAIN_BITCOIN__TESTNET = 10003;
     // CHAIN_FLOONET = 10004;
-    CHAIN_GOERLI = 10005;
-    CHAIN_ROPSTEN = 10006;
-    CHAIN_RINKEBY = 10007;
-    CHAIN_SEPOLIA = 10008;
-    CHAIN_TESTNET_ARBITRUM = 10009;
-    CHAIN_TESTNET_OPTIMISM = 10010;
-    CHAIN_TESTNET_POLYGON_ZKEVM = 10011; // Polygon ZK-EVM
-    CHAIN_TESTNET_ZKSYNC = 10012; // zkSync, https://zksync.io/
+    CHAIN_ETHEREUM__GOERLI = 10005;
+    CHAIN_ETHEREUM__ROPSTEN = 10006;
+    CHAIN_ETHEREUM__RINKEBY = 10007;
+    CHAIN_ETHEREUM__SEPOLIA = 10008;
+    CHAIN_ARBITRUM__GOERLI = 10009;
+    CHAIN_OPTIMISM__GOERLI = 10010;
+    CHAIN_POLYGON_ZKEVM__TESTNET = 10011; // Polygon ZK-EVM
+    CHAIN_ZKSYNC__TESTNET = 10012; // zkSync, https://zksync.io/
+    CHAIN_POLYGON_POS__MUMBAI = 10013;
 
     // Non-standard starts from 20_000
 }
