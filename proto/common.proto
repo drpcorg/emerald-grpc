@@ -27,6 +27,7 @@ enum ChainRef {
     CHAIN_ARBITRUM_NOVA__MAINNET = 1008; // Arbitrum Nova, https://arbitrum.io
     CHAIN_ZKSYNC__MAINNET = 1009; // zkSync, https://zksync.io/
     CHAIN_BASE__MAINNET = 1010; // Base, https://base.org/
+    CHAIN_LINEA__MAINNET = 1011; // Linea, https://docs.linea.build
 
     // Testnets start with 10_000
     CHAIN_ETHEREUM__MORDEN = 10001;
@@ -43,6 +44,7 @@ enum ChainRef {
     CHAIN_ZKSYNC__TESTNET = 10012; // zkSync, https://zksync.io/
     CHAIN_POLYGON_POS__MUMBAI = 10013;
     CHAIN_BASE__GOERLI = 10014;
+    CHAIN_LINEA__GOERLI = 10015;
 
     // Non-standard starts from 20_000
 }
