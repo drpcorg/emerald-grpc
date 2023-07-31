@@ -28,6 +28,8 @@ enum ChainRef {
     CHAIN_ZKSYNC__MAINNET = 1009; // zkSync, https://zksync.io/
     CHAIN_BASE__MAINNET = 1010; // Base, https://base.org/
     CHAIN_LINEA__MAINNET = 1011; // Linea, https://docs.linea.build
+    CHAIN_GNOSIS__MAINNET = 1012; // Gnosis, https://www.gnosis.io/ 
+    CHAIN_AVALANCHE__MAINNET = 1013; // Avalanche, https://www.avax.network/
 
     // Testnets start with 10_000
     CHAIN_ETHEREUM__MORDEN = 10001;
@@ -45,6 +47,9 @@ enum ChainRef {
     CHAIN_POLYGON_POS__MUMBAI = 10013;
     CHAIN_BASE__GOERLI = 10014;
     CHAIN_LINEA__GOERLI = 10015;
+    CHAIN_FANTOM__TESTNET = 10016;
+    CHAIN_GNOSIS__CHIADO = 10017;
+    CHAIN_AVALANCHE__FUJI = 10018;
 
     // Non-standard starts from 20_000
 }
