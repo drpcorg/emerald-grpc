@@ -93,3 +93,12 @@ message BlockInfo {
     string block_id = 2;
     uint64 timestamp = 3;
 }
+
+enum AvailabilityEnum {
+    AVAIL_UNKNOWN = 0;
+    AVAIL_OK = 1;
+    AVAIL_LAGGING = 2;
+    AVAIL_IMMATURE = 3;
+    AVAIL_SYNCING = 4;
+    AVAIL_UNAVAILABLE = 5;
+}
