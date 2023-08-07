@@ -225,6 +225,7 @@ enum Capabilities {
     CAP_NONE = 0;
     CAP_CALLS = 1;
     CAP_BALANCE = 2;
+    CAP_WS_HEAD = 3;
 }
 
 message Label {
