@@ -31,6 +31,13 @@ enum ChainRef {
     CHAIN_GNOSIS__MAINNET = 1012; // Gnosis, https://www.gnosis.io/ 
     CHAIN_AVALANCHE__MAINNET = 1013; // Avalanche, https://www.avax.network/
 
+    CHAIN_STARKNET__MAINNET = 1014;
+    CHAIN_AURORA__MAINNET = 1015; 
+    CHAIN_SCROLL_MAINNET = 1016; // https://scroll.io/portal, mainnet for l2 doen't exists now
+    CHAIN_MANTLE_MAINNET = 1017;
+    CHAIN_KLAYTN_MAINNET = 1018;
+
+
     // Testnets start with 10_000
     CHAIN_ETHEREUM__MORDEN = 10001;
     CHAIN_ETHEREUM__KOVAN = 10002;
@@ -50,6 +57,12 @@ enum ChainRef {
     CHAIN_FANTOM__TESTNET = 10016;
     CHAIN_GNOSIS__CHIADO = 10017;
     CHAIN_AVALANCHE__FUJI = 10018;
+    CHAIN_STARKNET__GOERLI  = 10019;
+    CHAIN_STARKNET__GOERLI2 = 10020;
+    CHAIN_AURORA__TESTNET = 10021;
+    CHAIN_SCROLL_ALPHANET = 10022;
+    CHAIN_MANTLE_TESTNET = 10023;
+    CHAIN_KLAYTN_BAOBAB = 10024;
 
     // Non-standard starts from 20_000
 }
