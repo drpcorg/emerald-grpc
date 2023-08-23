@@ -75,6 +75,8 @@ message NativeCallReplyItem {
     uint32 error_code = 6;
     string upstream_id = 7;
     string error_data = 8;
+    bool chunked = 9;
+    bool final_chunk = 10;
 }
 
 message NativeSubscribeRequest {
