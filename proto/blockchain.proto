@@ -210,15 +210,6 @@ message ChainStatus {
     uint32 quorum = 3;
 }
 
-enum AvailabilityEnum {
-    AVAIL_UNKNOWN = 0;
-    AVAIL_OK = 1;
-    AVAIL_LAGGING = 2;
-    AVAIL_IMMATURE = 3;
-    AVAIL_SYNCING = 4;
-    AVAIL_UNAVAILABLE = 5;
-}
-
 message NodeDetails {
     uint32 quorum = 1;
     repeated Label labels = 2;
