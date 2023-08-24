@@ -29,6 +29,7 @@ message NativeCallRequest {
     Selector selector = 3;
     int32 quorum = 4;
     AvailabilityEnum min_availability = 5;
+    uint32 chunk_size = 6; // in bytes
 }
 
 message NativeCallItem {
