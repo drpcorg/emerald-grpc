@@ -30,6 +30,7 @@ message NativeCallRequest {
     int32 quorum = 4;
     AvailabilityEnum min_availability = 5;
     uint32 chunk_size = 6; // in bytes
+    bool sorted = 7;
 }
 
 message NativeCallItem {
