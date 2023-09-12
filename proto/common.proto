@@ -65,6 +65,7 @@ enum ChainRef {
     CHAIN_KLAYTN__BAOBAB = 10024;
     CHAIN_SCROLL__SEPOLIA = 10025;
     CHAIN_BSC__TESTNET = 10026;
+    CHAIN_ETHEREUM__HOLESKY = 10027;
 
     // Non-standard starts from 20_000
 }
