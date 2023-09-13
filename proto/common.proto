@@ -28,15 +28,17 @@ enum ChainRef {
     CHAIN_ZKSYNC__MAINNET = 1009; // zkSync, https://zksync.io/
     CHAIN_BASE__MAINNET = 1010; // Base, https://base.org/
     CHAIN_LINEA__MAINNET = 1011; // Linea, https://docs.linea.build
-    CHAIN_GNOSIS__MAINNET = 1012; // Gnosis, https://www.gnosis.io/ 
+    CHAIN_GNOSIS__MAINNET = 1012; // Gnosis, https://www.gnosis.io/
     CHAIN_AVALANCHE__MAINNET = 1013; // Avalanche, https://www.avax.network/
 
     CHAIN_STARKNET__MAINNET = 1014;
-    CHAIN_AURORA__MAINNET = 1015; 
+    CHAIN_AURORA__MAINNET = 1015;
     CHAIN_SCROLL__MAINNET = 1016; // https://scroll.io/portal, mainnet for l2 doen't exists now
     CHAIN_MANTLE__MAINNET = 1017;
     CHAIN_KLAYTN__MAINNET = 1018;
-
+    CHAIN_CELO__MAINNET = 1019;
+    CHAIN_MOONBEAM__MAINNET = 1020;
+    CHAIN_MOONBEAM__MOONRIVER = 1021;
 
     // Testnets start with 10_000
     CHAIN_ETHEREUM__MORDEN = 10001;
@@ -66,6 +68,8 @@ enum ChainRef {
     CHAIN_SCROLL__SEPOLIA = 10025;
     CHAIN_BSC__TESTNET = 10026;
     CHAIN_ETHEREUM__HOLESKY = 10027;
+    CHAIN_MOONBEAM__ALPHA = 10028;
+    CHAIN_CELO__ALFAJORES = 10029;
 
     // Non-standard starts from 20_000
 }
