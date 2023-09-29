@@ -73,7 +73,7 @@ enum ChainRef {
     CHAIN_MOONBEAM__ALPHA = 10028;
     CHAIN_CELO__ALFAJORES = 10029;
     CHAIN_CRONOS__TESTNET = 10030;
-    CHAIN_METIS__ANDROMEDA = 10031;
+    CHAIN_METIS__GOERLI = 10031;
 
     // Non-standard starts from 20_000
 }
