@@ -41,6 +41,7 @@ enum ChainRef {
     CHAIN_MOONBEAM__MOONRIVER = 1021;
     CHAIN_CRONOS__MAINNET = 1022;
     CHAIN_METIS__MAINNET = 1023;
+    CHAIN_OPBNB__MAINNET = 1024;
 
     // Testnets start with 10_000
     CHAIN_ETHEREUM__MORDEN = 10001;
@@ -74,6 +75,7 @@ enum ChainRef {
     CHAIN_CELO__ALFAJORES = 10029;
     CHAIN_CRONOS__TESTNET = 10030;
     CHAIN_METIS__GOERLI = 10031;
+    CHAIN_OPBNB__TESTNET = 10032;
 
     // Non-standard starts from 20_000
 }
