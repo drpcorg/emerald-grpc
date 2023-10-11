@@ -78,6 +78,7 @@ enum ChainRef {
     CHAIN_METIS__GOERLI = 10031;
     CHAIN_OPBNB__TESTNET = 10032;
     CHAIN_KAVA__TESTNET = 10033;
+    CHAIN_IMMUTABLE_ZKEVM__TESTNET = 10034;
 
     // Non-standard starts from 20_000
 }
