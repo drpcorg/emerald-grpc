@@ -43,6 +43,7 @@ enum ChainRef {
     CHAIN_METIS__MAINNET = 1023;
     CHAIN_OPBNB__MAINNET = 1024;
     CHAIN_KAVA__MAINNET = 1025;
+    CHAIN_ASTAR_MAINNET = 1026;
 
     // Testnets start with 10_000
     CHAIN_ETHEREUM__MORDEN = 10001;
@@ -79,6 +80,7 @@ enum ChainRef {
     CHAIN_OPBNB__TESTNET = 10032;
     CHAIN_KAVA__TESTNET = 10033;
     CHAIN_IMMUTABLE_ZKEVM__TESTNET = 10034;
+    CHAIN_ASTAR_ZKATANA = 10035;
 
     // Non-standard starts from 20_000
 }
