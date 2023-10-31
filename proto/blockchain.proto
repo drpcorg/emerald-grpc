@@ -5,15 +5,6 @@ import "common.proto";
 
 service Blockchain {
     rpc SubscribeHead (Chain) returns (stream ChainHead) {}
-    rpc SubscribeBalance (BalanceRequest) returns (stream AddressBalance) {}
-    rpc SubscribeTxStatus (TxStatusRequest) returns (stream TxStatus) {}
-
-    rpc GetBalance (BalanceRequest) returns (stream AddressBalance) {}
-
-    /**
-     * Fee Estimation service. The server tries to estimate a fair fee based on the last N blocks.
-     */
-    rpc EstimateFee (EstimateFeeRequest) returns (EstimateFeeResponse) {}
 
     rpc NativeCall (NativeCallRequest) returns (stream NativeCallReplyItem) {}
     rpc NativeSubscribe (NativeSubscribeRequest) returns (stream NativeSubscribeReplyItem) {}
@@ -103,41 +94,6 @@ message ChainHead {
     bytes weight = 5;
     uint64 reorg = 6;
     string parent_block_id = 7;
-}
-
-message TxStatusRequest {
-    ChainRef chain = 1;
-    string tx_id = 2;
-    uint32 confirmation_limit = 3;
-}
-
-message TxStatus {
-    string tx_id = 1;
-    bool broadcasted = 2;
-    bool mined = 3;
-    BlockInfo block = 4;
-    uint32 confirmations = 5;
-}
-
-message BalanceRequest {
-    Asset asset = 1;
-    AnyAddress address = 2;
-    bool include_utxo = 3;
-}
-
-message AddressBalance {
-    Asset asset = 1;
-    SingleAddress address = 2;
-    string balance = 3;
-    bool confirmed = 4;
-    repeated Utxo utxo = 5;
-}
-
-message Utxo {
-    string tx_id = 1;
-    uint64 index = 2;
-    string balance = 3;
-    bool spent = 4;
 }
 
 message SubscribeNodeStatusRequest {
@@ -259,80 +215,4 @@ message NotSelector {
 
 message ExistsSelector {
     string name = 1;
-}
-
-/**
- * Request for Fee Estimation Service
- */
-message EstimateFeeRequest {
-    // Target chain
-    ChainRef chain = 1;
-    // The way how the fee should be estimated
-    FeeEstimationMode mode = 2;
-    // How many blocks the server is supposed to use to estimate current fee. Note that the server may use value, depending on configuration
-    uint32 blocks = 3;
-}
-
-/**
- * Responset for Fee Estimation Service
- */
-message EstimateFeeResponse {
-    // May return different struct, depending on the blockchain
-    oneof fee_type {
-        // Standard Ethereum Fee, supported by majority of forks and by Ethereum Mainnet before EIP-1559
-        EthereumStdFees ethereumStd = 1;
-        // Ethereum Fee for EIP-1559 compatible forks
-        EthereumExtFees ethereumExtended = 2;
-        // Standard Bitcoin Fee
-        BitcoinStdFees bitcoinStd = 3;
-    }
-}
-
-/**
- * The mode of how the fee must be estimated
- */
-enum FeeEstimationMode {
-    INVALID = 0;
-    // Average over last transaction in each block
-    AVG_LAST = 1;
-    // Average over transaction 5th from the end in each block
-    AVG_T5 = 2;
-    // Average over transaction 20th from the end in each block
-    AVG_T20 = 3;
-    // Average over transaction 50th from the end in each block
-    AVG_T50 = 4;
-    // Minimal fee that would be accepted by every last block
-    MIN_ALWAYS = 5;
-    // Average over transaction in the middle of each block
-    AVG_MIDDLE = 6;
-    // Average over transaction in head of each block. Note that for Bitcoin it doesn't count COINBASE tx as top tx.
-    AVG_TOP = 7;
-}
-
-/**
- * Standard Ethereum Fee, supported by majority of forks and by Ethereum Mainnet before EIP-1559
- */
-message EthereumStdFees {
-    // Big Number encoded as string. Fee value in Wei
-    string fee = 1;
-}
-
-/**
- * Ethereum Fee for EIP-1559 compatible forks
- */
-message EthereumExtFees {
-    // Big Number encoded as string. Estimated fee that expected to be actually paid. I.e. it's the Base Fee + Priority Fee
-    string expect = 1;
-    // Big Number encoded as string. Priority Fee in Wei
-    string priority = 2;
-    // Big Number encoded as string. Max Fee value in Wei. Note that it only indicates the current preference, and the actual Max may be significantly lower, depending on the usage scenario.
-    string max = 3;
-}
-
-/**
- * Standard Bitcoin Fee
- */
-message BitcoinStdFees {
-    // Fee in Satoshi per Kilobyte. Note that the actual fee calculation MUST divide it by 1024 at the last step to get a fair fee.
-    uint64 satPerKb = 1;
 }
