@@ -9,6 +9,8 @@ service Blockchain {
     rpc NativeCall (NativeCallRequest) returns (stream NativeCallReplyItem) {}
     rpc NativeSubscribe (NativeSubscribeRequest) returns (stream NativeSubscribeReplyItem) {}
 
+    rpc EstimateLogsCount (EstimateLogsCountRequest) returns (EstimateLogsCountResponse) {}
+
     rpc Describe (DescribeRequest) returns (DescribeResponse) {}
     rpc SubscribeStatus (StatusRequest) returns (stream ChainStatus) {}
     rpc SubscribeNodeStatus(SubscribeNodeStatusRequest) returns (stream NodeStatusResponse) {}
@@ -215,4 +217,25 @@ message NotSelector {
 
 message ExistsSelector {
     string name = 1;
+}
+
+message EstimateLogsCountRequest {
+    ChainRef chain = 1;
+
+    uint64 fromBlock = 2;
+    uint64 toBlock = 3;
+
+    repeated string addresses = 4;
+
+    // API eth guarantees that there are always four,
+    // but there can be a variable number of filters for each topic.
+    repeated string topics1 = 5;
+    repeated string topics2 = 6;
+    repeated string topics3 = 7;
+    repeated string topics4 = 8;
+}
+
+message EstimateLogsCountResponse {
+    bool succeed = 1;
+    uint64 count = 2;
 }
