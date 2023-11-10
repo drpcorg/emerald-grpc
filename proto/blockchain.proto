@@ -30,6 +30,7 @@ message NativeCallItem {
     bytes payload = 4;
     uint64 nonce = 5;
     string request_id = 6;
+    repeated Matcher matchers = 7;
 }
 
 /**
@@ -194,6 +195,16 @@ message Selector {
     }
 
     bool should_be_forwarded = 100;
+}
+
+message Matcher {
+    oneof matcher_type {
+        HeightMatcher height_matcher = 1;
+    }
+}
+
+message HeightMatcher {
+    uint64 height = 1;
 }
 
 message LabelSelector {
