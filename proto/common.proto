@@ -85,6 +85,7 @@ enum ChainRef {
     CHAIN_ASTAR_ZKATANA = 10035;
     CHAIN_VARA_TESTNET = 10036;
     CHAIN_SOLANA_TESTNET = 10037;
+    CHAIN_OPTIMISM_SEPOLIA = 10038;
 
     // Non-standard starts from 20_000
 }
