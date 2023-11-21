@@ -66,11 +66,12 @@ message NativeCallReplyItem {
      * Available only when it's configured at the edge dshackle and nonce is provided wit the request.
      */
     NativeCallReplySignature signature = 5;
-    uint32 error_code = 6;
+    uint32 error_code = 6 [deprecated = true];
     string upstream_id = 7;
     string error_data = 8;
     bool chunked = 9;
     bool final_chunk = 10;
+    int32 item_error_code = 11;
 }
 
 message NativeSubscribeRequest {
