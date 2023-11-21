@@ -71,7 +71,7 @@ message NativeCallReplyItem {
     string error_data = 8;
     bool chunked = 9;
     bool final_chunk = 10;
-    int32 item_error_code = 11;
+    sint32 item_error_code = 11;
 }
 
 message NativeSubscribeRequest {
