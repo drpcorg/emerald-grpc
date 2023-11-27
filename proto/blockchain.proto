@@ -200,7 +200,7 @@ message Selector {
 }
 
 message HeightSelector {
-    uint64 height = 1;
+    int64 height = 1;
 }
 
 message LabelSelector {
