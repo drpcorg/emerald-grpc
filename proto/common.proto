@@ -87,6 +87,7 @@ enum ChainRef {
     CHAIN_SOLANA_TESTNET = 10037;
     CHAIN_OPTIMISM_SEPOLIA = 10038;
     CHAIN_SOLANA_DEVNET = 10039;
+    CHAIN_BASE__SEPOLIA = 10040;
     // Non-standard starts from 20_000
 }
 
