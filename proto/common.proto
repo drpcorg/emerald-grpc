@@ -138,4 +138,5 @@ enum AvailabilityEnum {
     AVAIL_IMMATURE = 3;
     AVAIL_SYNCING = 4;
     AVAIL_UNAVAILABLE = 5;
+    AVAIL_FORKED = 6;
 }
