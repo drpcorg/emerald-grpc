@@ -97,6 +97,8 @@ message ChainHead {
     uint64 reorg = 6;
     string parent_block_id = 7;
     uint64 slot = 8;
+    int64 current_lower_block = 9;
+    int64 current_lower_slot = 10;
 }
 
 message SubscribeNodeStatusRequest {
@@ -154,6 +156,8 @@ message DescribeChain {
      * List of subscriptions available through NativeSubscribe
      */
     repeated string supportedSubscriptions = 8;
+    int64 current_lower_block = 9;
+    int64 current_lower_slot = 10;
 }
 
 message BuildInfo {
