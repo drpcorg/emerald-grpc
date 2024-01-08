@@ -100,6 +100,7 @@ enum ChainRef {
     CHAIN_TAIKO_JOLNIR = 10043;
     CHAIN_OKTC_TESTNET = 10044;
     CHAIN_MANTA_PACIFIC_TESTNET = 10045;
+    CHAIN_ZKSYNC_SEPOLIA = 10046;
 
     // Non-standard starts from 20_000
 }
