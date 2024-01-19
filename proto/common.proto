@@ -103,6 +103,7 @@ enum ChainRef {
     CHAIN_ZKSYNC_SEPOLIA = 10046;
     CHAIN_BERACHAIN_ARTIO = 10047;
     CHAIN_POLYGON_AMOY = 10048;
+    CHAIN_BLAST_SEPOLIA = 10049;
 
     // Non-standard starts from 20_000
 }
