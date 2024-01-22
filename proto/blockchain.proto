@@ -99,6 +99,7 @@ message ChainHead {
     uint64 slot = 8;
     uint64 current_lower_block = 9;
     uint64 current_lower_slot = 10;
+    uint64 current_lower_data_timestamp = 11;
 }
 
 message SubscribeNodeStatusRequest {
