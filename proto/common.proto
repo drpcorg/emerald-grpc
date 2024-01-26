@@ -106,6 +106,7 @@ enum ChainRef {
     CHAIN_BLAST_SEPOLIA = 10049;
     CHAIN_LISK_TESTNET = 10050;
     CHAIN_ARBITRUM_SEPOLIA = 10051;
+    CHAIN_TAIKO_KATLA = 10052;
 
     // Non-standard starts from 20_000
 }
