@@ -121,6 +121,7 @@ enum ChainRef {
     CHAIN_EVMOS_TESTNET = 10055;
     CHAIN_NEON_EVM_DEVNET = 10056;
     CHAIN_HECO_TESTNET = 10057;
+    CHAIN_METIS_SEPOLIA = 10058;
 
     // Non-standard starts from 20_000
 }
