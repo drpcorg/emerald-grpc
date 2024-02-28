@@ -135,6 +135,7 @@ enum ChainRef {
     CHAIN_TELOS__TESTNET = 10063;
     CHAIN_NEAR__TESTNET = 10064;
     CHAIN_NEAR__BETANET = 10065;
+    CHAIN_MANTLE__SEPOLIA = 10066;
 
     // Non-standard starts from 20_000
 }
