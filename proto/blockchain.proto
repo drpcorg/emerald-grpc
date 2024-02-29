@@ -27,39 +27,25 @@ message NativeCallRequest {
 message NativeCallItem {
     uint32 id = 1;
     string method = 3;
-    bytes payload = 4 [deprecated = true];
     uint64 nonce = 5;
     string request_id = 6;
     repeated Selector selectors = 7;
-    NativeCallItemData data = 8;
-}
-
-message NativeCallItemData {
     oneof data {
-        JsonRpcData json_rpc_data = 1;
-        RestData rest_data = 2;
+        bytes payload = 4;
+        RestData rest_data = 8;
     }
-}
-
-message JsonRpcData {
-    bytes payload = 1;
 }
 
 message RestData {
     bytes payload = 1;
     repeated string path_params = 2;
-    repeated Header headers = 3;
-    repeated QueryParam query_params = 4;
+    repeated KeyValue headers = 3;
+    repeated KeyValue query_params = 4;
 }
 
-message Header {
-    string header_key = 1;
-    string header_value = 2;
-}
-
-message QueryParam {
-    string query_param_key = 1;
-    string query_param_value = 2;
+message KeyValue {
+    string key = 1;
+    string value = 2;
 }
 
 /**
