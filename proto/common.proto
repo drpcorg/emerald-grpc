@@ -68,6 +68,7 @@ enum ChainRef {
     CHAIN_CORE__MAINNET = 1048;
     CHAIN_TELOS__MAINNET = 1049;
     CHAIN_NEAR__MAINNET = 1050;
+    CHAIN_BLAST__MAINNET = 1051;
 
     // Testnets start with 10_000
     CHAIN_ETHEREUM__MORDEN = 10001;
