@@ -129,6 +129,7 @@ enum LowerBoundType {
     LOWER_BOUND_UNSPECIFIED = 0;
     LOWER_BOUND_SLOT = 1;
     LOWER_BOUND_STATE = 2;
+    LOWER_BOUND_BLOCK = 3;
 }
 
 message SubscribeNodeStatusRequest {
