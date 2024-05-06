@@ -96,6 +96,7 @@ message NativeSubscribeRequest {
     bytes payload = 3;
     Selector selector = 4;
     uint64 nonce = 5;
+    string subscription_id = 6;
 }
 
 message NativeSubscribeReplyItem {
