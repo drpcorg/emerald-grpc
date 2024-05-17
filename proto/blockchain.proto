@@ -232,6 +232,7 @@ message Selector {
         ExistsSelector existsSelector = 5;
         HeightSelector height_selector = 6;
         SlotHeightSelector slot_height_selector = 7;
+        LowerHeightSelector lower_height_selector = 8;
     }
 
     bool should_be_forwarded = 100;
@@ -243,6 +244,10 @@ message HeightSelector {
 
 message SlotHeightSelector {
     int64 slotHeight = 1;
+}
+
+message LowerHeightSelector {
+    int64 height = 1;
 }
 
 message LabelSelector {
