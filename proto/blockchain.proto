@@ -248,6 +248,7 @@ message SlotHeightSelector {
 
 message LowerHeightSelector {
     int64 height = 1;
+    LowerBoundType lower_bound_type = 2;
 }
 
 message LabelSelector {
