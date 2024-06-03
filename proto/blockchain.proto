@@ -252,8 +252,21 @@ message Selector {
     bool should_be_forwarded = 100;
 }
 
+enum BlockTag {
+    UNKNOWN = 0;
+    PENDING = 1;
+    LATEST = 2;
+    SAFE = 3;
+    FINALIZED = 4;
+
+}
+
 message HeightSelector {
-    int64 height = 1;
+    int64 height = 1 [deprecated = true];
+    oneof heightOrNumber {
+        uint64 number = 2;
+        BlockTag tag = 3;
+    }
 }
 
 message SlotHeightSelector {
