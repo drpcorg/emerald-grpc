@@ -137,17 +137,6 @@ enum LowerBoundType {
     LOWER_BOUND_TX = 4;
 }
 
-enum FinalizationType {
-    FINALIZATION_UNSPECIFIED = 0;
-    FINALIZATION_SAFE_BLOCK = 1;
-    FINALIZATION_FINALIZED_BLOCK = 2;
-}
-
-message FinalizationData {
-    uint64 height = 1;
-    FinalizationType type = 2;
-}
-
 message SubscribeNodeStatusRequest {
     uint64 timespan = 1;
     // optional param for tracing

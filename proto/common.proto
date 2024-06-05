@@ -217,3 +217,14 @@ enum AvailabilityEnum {
     AVAIL_UNAVAILABLE = 5;
     AVAIL_FORKED = 6;
 }
+
+enum FinalizationType {
+    FINALIZATION_UNSPECIFIED = 0;
+    FINALIZATION_SAFE_BLOCK = 1;
+    FINALIZATION_FINALIZED_BLOCK = 2;
+}
+
+message FinalizationData {
+    uint64 height = 1;
+    FinalizationType type = 2;
+}
