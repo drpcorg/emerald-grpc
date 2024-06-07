@@ -135,6 +135,7 @@ enum LowerBoundType {
     LOWER_BOUND_STATE = 2;
     LOWER_BOUND_BLOCK = 3;
     LOWER_BOUND_TX = 4;
+    LOWER_BOUND_LOGS = 5;
 }
 
 message SubscribeNodeStatusRequest {
