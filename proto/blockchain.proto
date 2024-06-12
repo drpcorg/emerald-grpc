@@ -8,6 +8,7 @@ service Blockchain {
 
     rpc NativeCall (NativeCallRequest) returns (stream NativeCallReplyItem) {}
     rpc NativeSubscribe (NativeSubscribeRequest) returns (stream NativeSubscribeReplyItem) {}
+    rpc SubscribeChainStatus (SubscribeChainStatusRequest) returns (stream SubscribeChainStatusResponse) {}
 
     rpc Describe (DescribeRequest) returns (DescribeResponse) {}
     rpc SubscribeStatus (StatusRequest) returns (stream ChainStatus) {}
@@ -288,4 +289,33 @@ message NotSelector {
 
 message ExistsSelector {
     string name = 1;
+}
+
+message SubscribeChainStatusRequest {
+}
+
+message SubscribeChainStatusResponse {
+    ChainDescription chain_description = 1;
+    BuildInfo build_info = 2;
+}
+
+message ChainDescription {
+    ChainRef chain = 1;
+    ChainStatus status = 2;
+    Head head = 3;
+    repeated string supportedMethods = 4;
+    repeated string supportedSubscriptions = 5;
+    repeated Capabilities capabilities = 6;
+    repeated LowerBound lower_bounds = 7;
+    repeated FinalizationData finalization_data = 8;
+    repeated NodeDetails nodes = 9;
+}
+
+message Head {
+    uint64 height = 1;
+    string block_id = 2;
+    uint64 timestamp = 3;
+    bytes weight = 4;
+    string parent_block_id = 5;
+    uint64 slot = 6;
 }
