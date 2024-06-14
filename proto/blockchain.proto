@@ -301,21 +301,51 @@ message SubscribeChainStatusResponse {
 
 message ChainDescription {
     ChainRef chain = 1;
-    ChainStatus status = 2;
-    Head head = 3;
-    repeated string supportedMethods = 4;
-    repeated string supportedSubscriptions = 5;
-    repeated Capabilities capabilities = 6;
-    repeated LowerBound lower_bounds = 7;
-    repeated FinalizationData finalization_data = 8;
-    repeated NodeDetails nodes = 9;
+    repeated ChainEvent chain_event = 2;
 }
 
-message Head {
+message HeadEvent {
     uint64 height = 1;
     string block_id = 2;
     uint64 timestamp = 3;
     bytes weight = 4;
     string parent_block_id = 5;
     uint64 slot = 6;
+}
+
+message ChainEvent {
+    oneof chain_event {
+        ChainStatus status = 1;
+        HeadEvent head = 2;
+        SupportedMethodsEvent supported_methods_event = 3;
+        SupportedSubscriptionsEvent supported_subscriptions_event = 4;
+        CapabilitiesEvent capabilities_event = 5;
+        LowerBoundEvent lower_bounds_event = 6;
+        FinalizationDataEvent finalization_data_event = 7;
+        NodeDetailsEvent nodes_event = 8;
+    }
+}
+
+message SupportedMethodsEvent {
+    repeated string methods = 1;
+}
+
+message SupportedSubscriptionsEvent {
+    repeated string subs = 1;
+}
+
+message CapabilitiesEvent {
+    repeated Capabilities capabilities = 1;
+}
+
+message LowerBoundEvent {
+    repeated LowerBound lower_bounds = 1;
+}
+
+message FinalizationDataEvent {
+    repeated FinalizationData finalization_data = 1;
+}
+
+message NodeDetailsEvent {
+    repeated NodeDetails nodes = 1;
 }
