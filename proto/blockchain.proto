@@ -297,6 +297,7 @@ message SubscribeChainStatusRequest {
 message SubscribeChainStatusResponse {
     ChainDescription chain_description = 1;
     BuildInfo build_info = 2;
+    bool full_response = 3;
 }
 
 message ChainDescription {
