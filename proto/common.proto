@@ -83,6 +83,8 @@ enum ChainRef {
     ZIRCUIT__MAINNET = 1063;
     AVAIL__MAINNET = 1064;
     FRAXTAL__MAINNET = 1065;
+    TRON_EVM__MAINNET = 1066;
+    TRON_HTTP__MAINNET = 1067;
 
     // Testnets start with 10_000
     CHAIN_ETHEREUM__MORDEN = 10001;
@@ -175,6 +177,8 @@ enum ChainRef {
     ZIRCUIT__TESTNET = 10088;
     AVAIL__TURING_TESTNET = 10089;
     FRAXTAL___TESTNET = 10090;
+    TRON_EVM__SHASTA = 10091;
+    TRON_HTTP__SHASTA = 10092;
 }
 
 message SingleAddress {
