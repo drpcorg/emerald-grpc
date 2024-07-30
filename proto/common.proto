@@ -85,6 +85,8 @@ enum ChainRef {
     FRAXTAL__MAINNET = 1065;
     TRON_EVM__MAINNET = 1066;
     TRON_HTTP__MAINNET = 1067;
+    KROMA__MAINNET = 1068;
+    WEMIX__MAINNET = 1069;
 
     // Testnets start with 10_000
     CHAIN_ETHEREUM__MORDEN = 10001;
@@ -179,6 +181,8 @@ enum ChainRef {
     FRAXTAL___TESTNET = 10090;
     TRON_EVM__SHASTA = 10091;
     TRON_HTTP__SHASTA = 10092;
+    CHAIN_KROMA__SEPOLIA = 10093;
+    CHAIN_WEMIX__TESTNET = 10094;
 }
 
 message SingleAddress {
