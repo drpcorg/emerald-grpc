@@ -87,6 +87,7 @@ enum ChainRef {
     TRON_HTTP__MAINNET = 1067;
     KROMA__MAINNET = 1068;
     WEMIX__MAINNET = 1069;
+    CHAIN_ALEPHZERO__MAINNET = 1070;
 
     // Testnets start with 10_000
     CHAIN_ETHEREUM__MORDEN = 10001;
