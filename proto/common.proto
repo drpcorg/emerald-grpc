@@ -88,6 +88,8 @@ enum ChainRef {
     KROMA__MAINNET = 1068;
     WEMIX__MAINNET = 1069;
     CHAIN_ALEPHZERO__MAINNET = 1070;
+    POLKADOT__MAINNET = 1071;
+    KUSAMA__MAINNET = 1072;
 
     // Testnets start with 10_000
     CHAIN_ETHEREUM__MORDEN = 10001;
