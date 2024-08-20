@@ -266,7 +266,7 @@ message SlotHeightSelector {
 }
 
 message LowerHeightSelector {
-    int64 height = 1 [deprecated = true]; // to be removed
+    int64 height = 1;
     LowerBoundType lower_bound_type = 2;
 }
 
