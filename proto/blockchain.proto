@@ -137,8 +137,7 @@ enum LowerBoundType {
     LOWER_BOUND_BLOCK = 3;
     LOWER_BOUND_TX = 4;
     LOWER_BOUND_LOGS = 5;
-    LOWER_BOUND_TRACE = 6; // trace methods
-    LOWER_BOUND_DEBUG = 7; // debug methods
+    LOWER_BOUND_TRACE = 6; // trace and debug methods
 }
 
 message SubscribeNodeStatusRequest {
