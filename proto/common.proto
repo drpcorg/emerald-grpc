@@ -237,6 +237,7 @@ enum ChainRef {
   CHAIN_MEZO__TESTNET = 10121;
   CHAIN_PLUME__DEVNET = 10122;
   CHAIN_PLUME__TESTNET = 10123;
+  CHAIN_MONAD__TESTNET = 10124;
 }
 
 message SingleAddress {
