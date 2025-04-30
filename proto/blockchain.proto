@@ -139,6 +139,8 @@ enum LowerBoundType {
     LOWER_BOUND_LOGS = 5;
     LOWER_BOUND_TRACE = 6; // trace and debug methods
     LOWER_BOUND_PROOF = 7;
+    LOWER_BOUND_BLOB = 8; // beacon chain
+    LOWER_BOUND_EPOCH = 9;
 }
 
 message SubscribeNodeStatusRequest {
