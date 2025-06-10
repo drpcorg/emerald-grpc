@@ -141,6 +141,7 @@ enum LowerBoundType {
     LOWER_BOUND_PROOF = 7;
     LOWER_BOUND_BLOB = 8; // beacon chain
     LOWER_BOUND_EPOCH = 9;
+    LOWER_BOUND_RECEIPTS = 10;
 }
 
 message SubscribeNodeStatusRequest {
