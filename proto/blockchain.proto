@@ -273,6 +273,7 @@ message SlotHeightSelector {
 message LowerHeightSelector {
     int64 height = 1;
     LowerBoundType lower_bound_type = 2;
+    int64 time_offset = 3;
 }
 
 message LabelSelector {
