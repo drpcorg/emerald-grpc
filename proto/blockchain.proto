@@ -99,6 +99,7 @@ message NativeSubscribeRequest {
     Selector selector = 4;
     uint64 nonce = 5;
     string subscription_id = 6;
+    string unsubscribe_method = 7;
 }
 
 message NativeSubscribeReplyItem {
