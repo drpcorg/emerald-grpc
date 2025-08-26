@@ -106,6 +106,7 @@ message NativeSubscribeReplyItem {
     bytes payload = 1;
     NativeCallReplySignature signature = 2;
     string upstream_id = 3;
+    bool heartbeat = 4;
 }
 
 message ChainHead {
