@@ -276,6 +276,7 @@ message LowerHeightSelector {
     int64 height = 1;
     LowerBoundType lower_bound_type = 2;
     int64 time_offset = 3;
+    int64 height_delta = 4;
 }
 
 message LabelSelector {
