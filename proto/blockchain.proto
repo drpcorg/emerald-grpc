@@ -246,6 +246,8 @@ message Selector {
         HeightSelector height_selector = 6;
         SlotHeightSelector slot_height_selector = 7;
         LowerHeightSelector lower_height_selector = 8;
+        GreaterThanEqualSelector gteSelector = 9;
+        LessThanEqualSelector lteSelector = 10;
     }
 
     bool should_be_forwarded = 100;
@@ -294,6 +296,14 @@ message AndSelector {
 
 message NotSelector {
     Selector selector = 1;
+}
+
+message GreaterThanEqualSelector {
+  Selector selector = 1;
+}
+
+message LessThanEqualSelector {
+  Selector selector = 1;
 }
 
 message ExistsSelector {
