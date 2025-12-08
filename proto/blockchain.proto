@@ -248,6 +248,7 @@ message Selector {
         LowerHeightSelector lower_height_selector = 8;
         GreaterThanSelector gtSelector = 9;
         LessThanSelector ltSelector = 10;
+        ExactSelector exactSelector = 11;
     }
 
     bool should_be_forwarded = 100;
@@ -296,6 +297,10 @@ message AndSelector {
 
 message NotSelector {
     Selector selector = 1;
+}
+
+message ExactSelector {
+  Selector selector = 1;
 }
 
 message GreaterThanSelector {
