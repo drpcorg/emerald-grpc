@@ -246,9 +246,9 @@ message Selector {
         HeightSelector height_selector = 6;
         SlotHeightSelector slot_height_selector = 7;
         LowerHeightSelector lower_height_selector = 8;
-        GreaterThanSelector gtSelector = 9;
-        LessThanSelector ltSelector = 10;
-        ExactSelector exactSelector = 11;
+        GreaterThanVersionSelector gtVersionSelector = 9;
+        LessThanVersionSelector ltVersionSelector = 10;
+        ExactVersionSelector exactVersionSelector = 11;
     }
 
     bool should_be_forwarded = 100;
@@ -260,7 +260,6 @@ enum BlockTag {
     LATEST = 2;
     SAFE = 3;
     FINALIZED = 4;
-
 }
 
 message HeightSelector {
@@ -299,16 +298,16 @@ message NotSelector {
     Selector selector = 1;
 }
 
-message ExactSelector {
-  Selector selector = 1;
+message ExactVersionSelector {
+  string version = 1;
 }
 
-message GreaterThanSelector {
-  Selector selector = 1;
+message GreaterThanVersionSelector {
+  string version = 1;
 }
 
-message LessThanSelector {
-  Selector selector = 1;
+message LessThanVersionSelector {
+  string version = 1;
 }
 
 message ExistsSelector {
