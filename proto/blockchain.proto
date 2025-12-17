@@ -90,6 +90,7 @@ message NativeCallReplyItem {
     sint32 item_error_code = 11;
     string upstream_node_version = 12; // a node version where we get a response from
     FinalizationData finalization = 13;
+    repeated KeyValue response_headers = 14;
 }
 
 message NativeSubscribeRequest {
