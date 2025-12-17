@@ -248,7 +248,6 @@ message Selector {
         LowerHeightSelector lower_height_selector = 8;
         MinVersionSelector minVersionSelector = 9;
         MaxVersionSelector maxVersionSelector = 10;
-        ExactVersionSelector exactVersionSelector = 11;
     }
 
     bool should_be_forwarded = 100;
@@ -296,10 +295,6 @@ message AndSelector {
 
 message NotSelector {
     Selector selector = 1;
-}
-
-message ExactVersionSelector {
-  string version = 1;
 }
 
 message MinVersionSelector {
