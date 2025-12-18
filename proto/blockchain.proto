@@ -247,6 +247,8 @@ message Selector {
         HeightSelector height_selector = 6;
         SlotHeightSelector slot_height_selector = 7;
         LowerHeightSelector lower_height_selector = 8;
+        MinVersionSelector minVersionSelector = 9;
+        MaxVersionSelector maxVersionSelector = 10;
     }
 
     bool should_be_forwarded = 100;
@@ -258,7 +260,6 @@ enum BlockTag {
     LATEST = 2;
     SAFE = 3;
     FINALIZED = 4;
-
 }
 
 message HeightSelector {
@@ -295,6 +296,14 @@ message AndSelector {
 
 message NotSelector {
     Selector selector = 1;
+}
+
+message MinVersionSelector {
+  string version = 1;
+}
+
+message MaxVersionSelector {
+  string version = 1;
 }
 
 message ExistsSelector {
