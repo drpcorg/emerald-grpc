@@ -91,6 +91,7 @@ message NativeCallReplyItem {
     string upstream_node_version = 12; // a node version where we get a response from
     FinalizationData finalization = 13;
     repeated KeyValue response_headers = 14;
+    bytes error_as_is = 15;
 }
 
 message NativeSubscribeRequest {
