@@ -292,6 +292,7 @@ enum ChainRef {
   CHAIN_IOTEX__TESTNET = 10151;
   CHAIN_XRPL__TESTNET = 10152;
   CHAIN_XRPL__DEVNET = 10153;
+  CHAIN_TEMPO__TESTNET = 10154;
 }
 
 message SingleAddress {
