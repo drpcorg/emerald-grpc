@@ -357,7 +357,7 @@ enum ChainRef {
   CHAIN_MOCA__TESTNET = 10188;
 
   // Virtual chains (no real blockchain)
-  CHAIN_LAMBDA__VIRTUAL = 99999; // P2P Lambda REST API synthetic provider
+  CHAIN_LAMBDA__VIRTUAL = 100000; // P2P Lambda REST API synthetic provider
 }
 
 message SingleAddress {
