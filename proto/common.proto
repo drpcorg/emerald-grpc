@@ -169,6 +169,7 @@ enum ChainRef {
   CHAIN_TEMPO__MAINNET = 1149;
   CHAIN_AZTEC__MAINNET = 1150;
   CHAIN_MOCA__MAINNET = 1151;
+  CHAIN_MORPH__MAINNET = 1152;
 
   // Testnets start with 10_000
   CHAIN_ETHEREUM__MORDEN = 10001;
@@ -355,6 +356,7 @@ enum ChainRef {
   CHAIN_AZTEC__TESTNET = 10186;
   CHAIN_AZTEC__DEVNET = 10187;
   CHAIN_MOCA__TESTNET = 10188;
+  CHAIN_MORPH__TESTNET = 10189;
 
   // Virtual chains (no real blockchain)
   CHAIN_LAMBDA__VIRTUAL = 100000; // P2P Lambda REST API synthetic provider
