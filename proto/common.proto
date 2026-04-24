@@ -173,6 +173,7 @@ enum ChainRef {
   CHAIN_TAC_MAINNET = 1153;
   CHAIN_TEA_MAINNET = 1154;
   CHAIN_ALGORAND__MAINNET = 1155;
+  CHAIN_ORDERLY__MAINNET = 1156;
 
   // Testnets start with 10_000
   CHAIN_ETHEREUM__MORDEN = 10001;
@@ -365,6 +366,7 @@ enum ChainRef {
   CHAIN_TEA__SEPOLIA = 10192;
   CHAIN_ALGORAND__TESTNET = 10193;
   CHAIN_ALGORAND__BETANET = 10194;
+  CHAIN_ORDERLY__TESTNET = 10195;
   
   // Virtual chains (no real blockchain)
   CHAIN_LAMBDA__VIRTUAL = 100000; // P2P Lambda REST API synthetic provider
