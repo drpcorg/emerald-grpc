@@ -370,7 +370,8 @@ enum ChainRef {
   CHAIN_ALGORAND__TESTNET = 10193;
   CHAIN_ALGORAND__BETANET = 10194;
   CHAIN_ORDERLY__TESTNET = 10195;
-  
+  CHAIN_STABLE__TESTNET = 10196;
+
   // Virtual chains (no real blockchain)
   CHAIN_LAMBDA__VIRTUAL = 100000; // P2P Lambda REST API synthetic provider
 }
