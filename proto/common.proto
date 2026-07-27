@@ -186,6 +186,7 @@ enum ChainRef {
   CHAIN_KITE__MAINNET = 1166;
   CHAIN_HUMANITY__MAINNET = 1167;
   CHAIN_APTOS__MAINNET = 1168;
+  CHAIN_MOVA__MAINNET = 1170;
 
   // Testnets start with 10_000
   CHAIN_ETHEREUM__MORDEN = 10001;
@@ -387,6 +388,7 @@ enum ChainRef {
   CHAIN_BOTANIX__TESTNET = 10201;
   CHAIN_HUMANITY__TESTNET = 10202;
   CHAIN_APTOS__TESTNET = 10203;
+  CHAIN_MOVA__TESTNET = 10205;
 
   // Virtual chains (no real blockchain)
   CHAIN_LAMBDA__VIRTUAL = 100000; // P2P Lambda REST API synthetic provider
